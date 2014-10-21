@@ -2,8 +2,8 @@
 tmp
 out
 node_modules
-.c9revisions
-.c9
+.c9revisions/
+.c9/
 .settings
 .settings.xml
 npm-debug.log
