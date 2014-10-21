@@ -1,7 +1,6 @@
-import std.stdio;
-import std.string;
 
-import Existence010;
+
+import * as Existence010 from 'Existence010';
 
 /** Uncomment these lines to instantiate other existences: */
 //import existence.Existence020;
@@ -16,10 +15,9 @@ import Existence010;
  * runs the Existence step by step in a loop
  * and prints the Existence's activity as it runs.
  */
-void main( string[] args )
-{
+
 		/** Change this line to instantiate another existence: */
-		Existence existence = new Existence010();
+		let existence = new Existence010();
 		//Existence existence = new Existence020();
 		//Existence existence = new Existence030();
 		//Existence existence = new Existence031();
@@ -29,9 +27,8 @@ void main( string[] args )
 		//Existence existence = new Existence051();
 		
 		/** Change this line to adjust the number of cycles of the loop: */
-		foreach( i; 0 .. 20 ) {
-			string stepTrace = existence.step();
-			writeln( i,": ", stepTrace );
+		for(let i = 0; i < 20 ; i++) {
+			let stepTrace = existence.step();
+			console.log( i,": ", stepTrace );
 		}
-}
 

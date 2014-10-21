@@ -2,9 +2,7 @@
 /*
   An experiment that can be chosen by the agent.
  */
-class Experiment {
-
-	this.label = null;
+export class Experiment {
 	
 	constructor (label){
 		this.label = label;
@@ -14,5 +12,4 @@ class Experiment {
 		return this.label;
 	}
 	
-	exports getLabel;
 }
