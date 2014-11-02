@@ -1,6 +1,5 @@
-Array.prototype.last = function(){
-    return this[this.length-1]
-}
+"use strict";
+
 
 Array.prototype.hasKey = function(key, label){
     return this.filter(function(e){
@@ -8,15 +7,18 @@ Array.prototype.hasKey = function(key, label){
     }).length;
 }
 
+// should be .findBy
 Array.prototype.forKey = function(key,label){
     return this.filter(function(item){
         return item[key] === label;
     })[0]
 }
 
-"use strict";
-
-
+window.println = function(i, sep, msg){
+        var div = document.createElement("div");
+        div.innerHTML = (i + sep + msg);
+        document.body.appendChild(div)
+}
 
 /**
  * instantiates an Existence.,
@@ -25,8 +27,12 @@ Array.prototype.forKey = function(key,label){
  */
 
 /** Change this line to instantiate another existence: */
-var _existence = new Existence010();
-//Existence existence = new Existence020();
+window.println("","","<br>_______ LESSON 1: __________________<br>");
+run( new Existence010() );
+
+window.println("","","<br>_______ LESSON 2: __________________<br>");
+run( new Existence020() );
+
 //Existence existence = new Existence030();
 //Existence existence = new Existence031();
 //Existence existence = new Existence032();
@@ -34,8 +40,10 @@ var _existence = new Existence010();
 //Existence existence = new Existence050();
 //Existence existence = new Existence051();
 
-/** Change this line to adjust the number of cycles of the loop: */
-for(var _i = 0; _i < 20 ; _i++) {
-    var _stepTrace = _existence.step();
-    console.log( _i," : ", _stepTrace );
+function run(_existence){
+    /** Change this line to adjust the number of cycles of the loop: */
+    for(var i = 0; i < 20 ; i++) {
+        var stepTrace = _existence.step();
+        window.println( i," : ", stepTrace );
+    }
 }

@@ -1,5 +1,9 @@
 "use strict";
 
 function Result(label) {
-       this.label = label;
+    var self = this;
+    this.label = label;
+    this.equals = function(other){
+        return other.label === self.label;
+    };
 };
